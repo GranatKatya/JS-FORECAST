@@ -1,0 +1,386 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="exam.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- 
+    fa fa -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    
+    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script> -->
+
+    
+    
+  </head>
+  <body>
+   
+    
+    <div class="container" style= "background-color: antiquewhite; margin-top: 10px;">
+        <div class="row" style="height: 70px;">
+                <asie class="col-4 "  style = "margin-top: 5px; font-size: x-large; font-weight: 750; color: rgb(43, 126, 84); ">MY WEATHER</asie>
+                <asie class=" col-8 "> 
+                <div  id="searchform">
+                    <input type="text" placeholder="Search..." id="searchtown" value="Teplodar" >
+                    <button type="submit"><i class="fa fa-search" id="send"></i></button>
+                  </div>
+            </asie>
+        </div>
+    </div>
+
+    <div class="container" style= "background-color: rgb(75, 74, 74); ">
+        <div class="row" style="color: white; "> 
+            <asie class="col-12 ">
+                    <button class="hbuton hbutonstyle" id="today">Today</button>                
+                    <button  class = "hbuton hbutonstyle" id="5dayforecast">5-day forecast</button>               
+            </asie>                   
+        </div>
+    </div>    
+
+
+    <div class="container" style= "background-color: rgb(224, 220, 220);" >
+        
+
+        <div class="row" style="color: white;  text-align: center;  display: none"  id="hiderow"> 
+                <div  class="col-1 "></div >
+                <div  class="col-10 " style= "margin-top: 20px; margin-bottom: 10px; background-color:  rgb(224, 220, 220); color: black;">
+                        <div class=" scrolling-wrapper1" id="scrollingwrapper"   >
+                               
+                               
+                                <div id="fivedayforecast card1"  class="card1 " >
+                                        <p style = " font-size: large; font-weight: 750; color: rgb(43, 126, 84);" id="hiderowtoday1">Tonight</p>
+                                        <p style = " font-size: medium; font-weight: 350; color:gray;"  id="hiderowtodaymounth1">JUN 30</p>
+                                        <div style=" text-align: center; display: inline-block; ">
+                                                        <img src="Image/moon4.png" style =" height: 80px; width:  80px;" id="hiderowtodayimg1" >
+                                                        <p style=" font-size: x-large; font-weight: 550; " id="hiderowtodaytemp1">32°C</p>
+                                                        <p style="color: gray;  font-weight: 550; " id="hiderowtodaydescription1">Clear, Warm</p>
+                                        </div>           
+                                </div>
+
+                                <div id="fivedayforecast card1"  class="card1 " >
+                                                <p style = " font-size: large; font-weight: 750; color: rgb(43, 126, 84);" id="hiderowtoday2">Sun</p>
+                                                <p style = " font-size: medium; font-weight: 350; color:gray;" id="hiderowtodaymounth2">JUN 30</p>
+                                                <div style=" text-align: center; display: inline-block; ">
+                                                                <img src="Image/sun.png" style =" height: 80px; width:  80px;" id="hiderowtodayimg2" >
+                                                                <p style=" font-size: x-large; font-weight: 550; " id="hiderowtodaytemp2">32°C</p>
+                                                                <p style="color: gray;  font-weight: 550; " id="hiderowtodaydescription2">Clear, Warm</p>
+                                                </div>          
+                                </div>
+
+                                <div id="fivedayforecast card1" class="card1 " >
+                                                <p style = " font-size: large; font-weight: 750; color: rgb(43, 126, 84);" id="hiderowtoday3">Mon</p>
+                                                <p style = " font-size: medium; font-weight: 350; color:gray;" id="hiderowtodaymounth3">JUN 30</p>
+                                                <div style=" text-align: center; display: inline-block; ">
+                                                                <img src="Image/cloudly.png" style =" height: 80px; width:  80px;" id="hiderowtodayimg3" >
+                                                                <p style=" font-size: x-large; font-weight: 550; " id="hiderowtodaytemp3">32°C</p>
+                                                                <p style="color: gray;  font-weight: 550; " id="hiderowtodaydescription3">Clear, Warm</p>
+                                                </div>          </div>
+
+                                <div  id="fivedayforecast card1" class="card1 "  >
+                                                <p style = " font-size: large; font-weight: 750; color: rgb(43, 126, 84);" id="hiderowtoday4">TUE</p>
+                                                <p style = " font-size: medium; font-weight: 350; color:gray;" id="hiderowtodaymounth4">JUN 30</p>
+                                                <div style=" text-align: center; display: inline-block; ">
+                                                                <img src="Image/rain.png" style =" height: 80px; width:  80px;"  id="hiderowtodayimg4">
+                                                                <p style=" font-size: x-large; font-weight: 550; " id="hiderowtodaytemp4">32°C</p>
+                                                                <p style="color: gray;  font-weight: 550; " id="hiderowtodaydescription4">Clear, Warm</p>
+                                                </div>          </div>
+
+                                <div id="fivedayforecast card1" class="card1 " >
+                                                <p style = " font-size: large; font-weight: 750; color: rgb(43, 126, 84);" id="hiderowtoday5">WED</p>
+                                                <p style = " font-size: medium; font-weight: 350; color:gray;" id="hiderowtodaymounth5">JUN 30</p>
+                                                <div style=" text-align: center; display: inline-block; ">
+                                                                <img src="Image/40182.png" style =" height: 80px; width:  80px;"  id="hiderowtodayimg5">
+                                                                <p style=" font-size: x-large; font-weight: 550; " id="hiderowtodaytemp5">32°C</p>
+                                                                <p style="color: gray;  font-weight: 550; " id="hiderowtodaydescription5">Clear, Warm</p>
+                                                </div>          </div>
+                              
+                        </div>
+
+                </div>
+
+        </div>
+
+            <div class="row" style="color: white;  text-align: center; "   id="firstrow"> 
+                <div  class="col-1 "></div >
+                <div  class="col-10 " style= "margin-top: 10px; background-color:  rgb(255, 255, 255);">
+                        <div class="row"  >
+                                <div  class="col-6"  style=" text-align: start; margin-top: 5px;  " >
+                                    <span style = " font-size: x-large; font-weight: 750; color: rgb(43, 126, 84);  ">CURRENT WEATHER </span>
+                                
+                                    <!-- <div style=" text-align: center; margin-top: 20px;" >
+                                        <div style=" text-align: center;  margin-left: -100px; display: inline-block;">
+                                                <img src="Image/sun.png" style =" height: 75px; width:  75px;" >
+                                                <p style="color: black;  font-weight: 550; ">Sunny</p>
+                                        </div>
+                                       
+
+                                        <div style=" text-align: center;  margin-left: 200px;  margin-right: -150px;  display: inline-block;">
+                                                <p><span  style = " font-size: xx-large; font-weight: 750; color: rgb(43, 126, 84);  ">29.0°C</span>
+                                                    <br><span style="color: black;  font-weight: 550;  font-size: small;">Real Feel 30°</span></p>
+                                                
+                                        </div>
+                                    </div > -->
+                                </div>
+                                        
+                                <div  class="col-6 "  style = " margin-top: 5px; text-align: end;">                                   
+                                    <span style = " font-size: x-large; font-weight: 750; color: rgb(43, 126, 84);  "> 30.01.2019</span>
+<!-- 
+                                    <div style=" text-align: center; margin-top: 20px;" >
+                                        <div  class="row" style="  margin-left: 100px; ">
+                                   
+                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: end;">Sunrise: </p>
+                                                <p   class="col-6" style="color: black;  font-weight: 550;  text-align: start;">7:04 AM</p>
+                                           
+                                               
+                                                <p class="col-6" style="color: black;  font-weight: 550;  text-align: end;">Sunset: </p>
+                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: start;">5:11 PM</p>
+                                           
+                                                <p class="col-6" style="color: black;  font-weight: 550;  text-align: end; ">Duration: </p>
+                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: start;">10:07 hr</p>
+                                           
+                                        </div>
+                                    </div> -->
+                                    
+                                </div >
+                              
+                        </div>
+                        <div class="row"  >
+
+                                        <div  class="col-4"  style="  margin-top: 5px;  " >
+                                                        
+                                                <div style=" text-align: center; margin-top: 20px; " >
+                                                        <div style=" text-align: center; display: inline-block; ">
+                                                                <img src="Image/sun.png" style =" height: 75px; width:  75px;"  id="firstimgforcurrentweather">
+                                                                <p style="color: black;  font-weight: 550; " id ="description">Sunny</p>
+                                                        </div>                                                          
+                                                </div >
+                                        </div>
+
+
+                                        <div  class="col-4"  style=" text-align: start; margin-top: 5px;"  id="ptransfer1">
+                                                <div style=" text-align: center;  margin-left: 30px;  margin-right: -150px;  margin-top:40px; display: inline-block;">
+                                                                <p><span  style = " font-size: xx-large; font-weight: 750; color: rgb(43, 126, 84);" id ="currentweathertemp" >29.0°C</span>
+                                                                        <br><span style="color: black;  font-weight: 550;  font-size: small;" id ="realfeel">Real Feel 30°</span></p>
+                                                                
+                                                </div>
+                                        </div>   
+                                        
+                                        
+                                        
+                                        <div  class="col-4 "  style = " margin-top: 5px; text-align: end;" id="ptransfer">                                   
+                                        
+                                                <div style=" text-align: center; margin-top: 20px;" >
+                                                        <div  class="row" >
+                                                        
+                                                                <p class="col-6" style="color: black;  font-weight: 550;  text-align: end;" >Sunraise: </p>
+                                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: start;" id="Sunraise" >7:04 AM</p>                                                               
+                                                                
+                                                                <p class="col-6" style="color: black;  font-weight: 550;  text-align: end;">Sunset: </p>
+                                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: start; " id="Sunset" >5:11 PM</p>
+                                                                
+                                                                <p class="col-6" style="color: black;  font-weight: 550;  text-align: end; ">Duration: </p>
+                                                                <p  class="col-6" style="color: black;  font-weight: 550;  text-align: start;" id="Duration" >10:07 hr</p>
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div >
+                        </div>
+                </div >
+               
+              
+        </div>
+
+
+        <div class="row" style="color: white;  text-align: center;  "  id="hourlyrow"> 
+                <div  class="col-1 "></div >
+                <div  class="col-10 " style= "margin-top: 20px; background-color:  rgb(255, 255, 255);  margin-bottom: 10px;">
+                        <div class="row"  >
+                                <div  class="col-12"  style=" text-align: start; margin-top: 5px;  " >
+                                    <span style = " font-size: x-large; font-weight: 750; color: rgb(43, 126, 84);  " >HOURLY</span>
+                                        
+                                    
+                                    <!-- <div class="container2">
+
+                                        <div class="hack1">
+                                          <div class="hack2"> -->
+                                                        <div class=" scrolling-wrapper2"   >
+                                                        <div class="card2">
+                                    <table  class="table table1 " sty   le="margin-bottom: 10px; " id="table">
+                                        <tr >
+                                        <th id="HOURLYforecastToday">Today</th>
+                                        <th id="time1">7pm</th>
+                                        <th id="time2">8pm</th>
+                                        <th id="time3">9pm</th>
+                                        <th id="time4">10pm</th>
+                                        <th id="time5">11pm</th>
+                                        <th id="time6">12am</th>
+                                        </tr>
+
+                                        <tr>
+                                        <td></td>
+                                        <td> <div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/cloudly.png" style =" height: 65px; width:  65px;"  id="timeimg1"></div></td>
+                                        <td><div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/40182.png" style =" height: 65px; width:  65px;" id="timeimg2"></div></td>   
+                                        <td><div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/gr.png" style =" height: 65px; width:  65px;"  id="timeimg3"></div></td>
+                                        <td id="fivecolumn"><div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/moon4.png" style =" height: 65px; width:  65px;" id="timeimg4" ></div></td>
+                                        <td id="sixcolumn" ><div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/rain.png" style =" height: 65px; width:  65px;" id="timeimg5" ></div></td>  
+                                        <td id="sevencolumn"><div style=" text-align: center;  display: inline-block;">
+                                                <img src="Image/sun5.png" style =" height: 65px; width:  65px;" id="timeimg6" ></div></td> 
+                                        </tr>
+                                        <tr>
+                                        <td   scope="row" style ="color: gray;" >Forecast</td>
+                                        <td id="forecast timedesc1">Сloudy</td>
+                                        <td id="forecast timedesc2">Partly cloudy</td>
+                                        <td id="forecast timedesc3">Storm</td>
+                                        <td id="forecast fivecolumn timedesc4" >Сlear</td>
+                                        <td id="forecast sixcolumn timedesc5">Rain</td>
+                                        <td id="forecast sevencolumn timedesc6">Partly cloud</td>
+                                        </tr>
+                                        <tr>
+                                        <td  style ="color: gray;">Temp(°C)</td>
+                                        <td id="timetemp1">29°</td>
+                                        <td id="timetemp2">28°</td>
+                                        <td id="timetemp3">29°</td>
+                                        <td id="fivecolumn timetemp4">27°</td>
+                                        <td id="sixcolumn timetemp5">30°</td>v
+                                        <td id="sevencolumn timetemp6">27°</td>
+                                        </tr>
+                                        <tr>
+                                        <td  style ="color: gray;">RealFeel</td>
+                                        <td id="timerealfeel1">28°</td>
+                                        <td id="timerealfeel2">29°</td>
+                                        <td id="timerealfeel3">30°</td>
+                                        <td id="timerealfeel4">28°</td>
+                                        <td id="timerealfeel5">28°</td>
+                                        <td id="timerealfeel6">29°</td>
+                                        </tr>
+                                        <tr>
+                                        <td  style ="color: gray;">Wind(km/h)</td>
+                                        <td id="timewind1">11 ESE</td>
+                                        <td id="timewind2">9 ESE</td>
+                                        <td id="timewind3">6 SE</td>
+                                        <td id="timewind4">9 ESE</td>
+                                        <td id="timewind5">8 SE</td>
+                                        <td id="timewind6">8 SE</td>
+                                        </tr>
+                                        
+                                    </table>
+                                        </div>
+                                       
+                                </div>
+                                        <!-- </div>
+                      
+                                  </div> -->
+                                                                
+                                </div>
+                        </div>
+                </div>
+        </div>    
+        
+        
+
+
+        
+        <div class="row myrow" id="threrdrow" > 
+                <div  class="col-1 "></div >
+                <div  class="col-10 mycol10 " id="rowsfortowns" >
+                        <div class="row"  >
+                                <div  class="col-12 NEARBYPLACESdiv"  >
+                                    <span class="NEARBYPLACES" >NEARBY PLACES</span>
+                                </div>
+                        </div>
+                        <div class="row rowfirstdivsforbearbyplaces" id="rowfirstdivsforbearbyplaces"  >
+                                <div  class="col-5 firsttownnearbyplaces"  id="transferdiv">
+                                    <div class="firsttownnearbyplacesname" id="nearbuplacesname1">Odessa</div> 
+                                    
+                                    <div class="firsttownnearbyplacesimg" >
+                                            <img src="Image/sun5.png" class="imgstyle" id="nearbuplacesimg1">
+                                    </div>
+                                    <div class="firsttownnearbyplacestemp" id="nearbuplacestemp1">28°C</div> 
+
+                                </div>
+                                                           
+                                <div  class="col-5 firsttownnearbyplaces2" id="transferdiv"   >
+                                    <div class="firsttownnearbyplacesname" id="nearbuplacesname2">Odessa</div> 
+                                    
+                                    <div class="firsttownnearbyplacesimg">
+                                            <img src="Image/sun.png" class="imgstyle" id="nearbuplacesimg2" >
+                                    </div>
+                                    <div class="firsttownnearbyplacestemp" id="nearbuplacestemp2">32°C</div> 
+
+                                </div>                                
+                        </div>
+                        <div class="row rowfirstdivsforbearbyplaces" id="rowfirstdivsforbearbyplaces"    >
+                                <div  class="col-5 firsttownnearbyplaces3"  id="transferdiv">
+                                    <div class="firsttownnearbyplacesname" id="nearbuplacesname3">Odessa</div> 
+                                    
+                                    <div  class="firsttownnearbyplacesimg" >
+                                            <img src="Image/40182.png" class="imgstyle" id="nearbuplacesimg3" >
+                                    </div>
+                                    <div class="firsttownnearbyplacestemp" id="nearbuplacestemp3">32°C</div> 
+
+                                </div>
+                               
+
+                                <div  class="col-5 firsttownnearbyplaces4" id="transferdiv" >
+                                    <div class="firsttownnearbyplacesname" id="nearbuplacesname4">Odessa</div> 
+                                    
+                                    <div class="firsttownnearbyplacesimg">
+                                            <img src="Image/rain.png" class="imgstyle" id="nearbuplacesimg4" >
+                                    </div>
+                                    <div class="firsttownnearbyplacestemp" id="nearbuplacestemp4">30°C</div> 
+
+                                </div>                                
+                        </div>
+                </div>
+        </div>         
+
+
+
+
+        <div class="row" style="color: white;  text-align: center;  display: none  " id="404error"  > 
+                        <div  class="col-1 "></div >
+                        <div  class="col-10 " style= "margin-top: 40px; margin-bottom: 40px; background-color: white; color: black;">
+                                        <div style=" text-align: center; display: inline-block; ">
+                                                        <img src="Image/404.png" class="firstimg" id = "firsterrorimg"  >
+                                                        <img src="Image/4041s.png" class="secondimg"  id = "seconderrorimg" >
+                                                        <p style=" font-size: x-large; font-weight: 550; color: gray; ">Town could not be  found<br>Please enter a different location</p>
+                                        </div>
+                        </div>
+        </div>
+
+
+    </div>    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src=" https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="exam.js"></script> 
+</body>
+</html>

@@ -1,0 +1,59 @@
+{
+   
+
+"users": [{
+    "name": "Royal Ideal Beach Hotel",
+    "typeofroom": "Standard Room",
+    "Nutrition": "all inclusive",
+    "Directions": "included",
+    "Rating": "3,9 из 5",
+    "Price" : "17592",
+    "City": "Jaboatao",
+    "Country": "Costa Rica",
+    "Hotel": "Hotel",
+    "Numberofdays" : "10"
+
+}, {
+    "name": "Royal  Hotel",
+    "typeofroom": "Standard Room",
+    "Nutrition": "all inclusive",
+    "Directions": "included",
+    "Rating": "4 из 5",
+    "Price" : "22000",
+    "City": "Jacarei",
+    "Country": "Cuba",
+    "Hotel": "Hilton Hotel",
+    "Numberofdays" : "20"
+
+
+}, {
+    "name": "Ideal  Hotel",
+    "typeofroom": "Standard Room",
+    "Nutrition": "all inclusive",
+    "Directions": "included",
+    "Rating": "5 из 5",
+    "Price" : "21000",
+    "City": "Jaigaon",
+    "Country": "Finland",
+    "Hotel": "Apollo Hotel",
+    "Numberofdays" : "15"
+
+
+},{
+    "name": "Hotel",
+    "typeofroom": "Standard Room",
+    "Nutrition": "all inclusive",
+    "Directions": "included",
+    "Rating": "3 из 5",
+    "Price" : "21000",
+    "City": "Jaigaon",
+    "Country": "Finland",
+    "Hotel": "Apollo Hotel",
+    "Numberofdays" : "15"
+
+
+}
+
+]
+
+}
